@@ -52,7 +52,7 @@
   --button-hover-color: var(--color-white);
   --button-hover-text-decoration: none;
   --button-hover-background: var(--color-primary);
-  --transition-duration: 0.3s;
+  --transition-duration: .3s;
   --transition-cubic-bezier: cubic-bezier(0.17, 0.67, 0, 1.01);
 }
 /* Document
@@ -191,7 +191,7 @@ main {
 
 .card-work:hover .card-image {
   transform: scale(1.2);
-  transform: var(--transition-duration) var(--transition-cubic-bezier);
+  transition: var(--transition-duration) var(--transition-cubic-bezier);
 }
 
 .card-work:hover .card-inner {
@@ -397,8 +397,8 @@ a:active {
   color: var(--button-hover-color);
   text-decoration: var(--button-hover-text-decoration);
   background: var(--button-hover-background);
-  transition: var(--transition-duration);
-  transition-property: color background;
+  transition-duration: var(--transition-duration);
+  transition-property: color background-color;
 }
 
 /**
