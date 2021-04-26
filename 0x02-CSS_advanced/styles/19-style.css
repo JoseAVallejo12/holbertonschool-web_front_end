@@ -7,8 +7,8 @@
   --color-dark-grey: #353535;
   --text-color: var(--color-black);
   --font-family-base: "Open Sans", "Helvetica Neue", Helvetica, Arial,
-    sans-serif;
-  --font-family-title: "Raleway", var(--font-family-base);
+  sans-serif;
+  --font-family-title: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
   --font-size-small: 1.2rem;
   --font-size-medium: 1.6rem;
   --font-size-large: 1.8rem;
@@ -45,9 +45,11 @@
  * 1. Correct the line height in all browsers.
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
-* {
-  box-sizing: border-box;
-}
+ *,
+ *::before,
+ *::after {
+   box-sizing: border-box;
+ }
 
 html {
   scroll-behavior: smooth;
@@ -108,7 +110,8 @@ main {
 }
 .container {
   width: 960px;
-  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .card-category {
@@ -134,13 +137,13 @@ main {
 }
 .nav .nav-link {
   display: block;
-  padding: 0.5rem 1rem 0.5rem 1rem;
+  padding: 0.5rem 1rem;
 }
 .nav .nav-link:hover {
   color: var(--nav-item-link-hover);
 }
 
-ul[class="row"] {
+ul.row {
   margin: 0;
   padding: 0;
   list-style: none;
