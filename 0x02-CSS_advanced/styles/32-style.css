@@ -8,7 +8,7 @@
   --text-color: var(--color-black);
   --font-family-base: "Open Sans", "Helvetica Neue", Helvetica, Arial,
     sans-serif;
-  --font-family-title: "Raleway", var(--font-family-base);
+  --font-family-title: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
   --font-size-small: 1.2rem;
   --font-size-medium: 1.6rem;
   --font-size-large: 1.8rem;
@@ -62,9 +62,12 @@
  * 1. Correct the line height in all browsers.
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
-* {
-  box-sizing: border-box;
-}
+ *,
+ *::before,
+ *::after {
+   box-sizing: border-box;
+ }
+
 
 html {
   scroll-behavior: smooth;
@@ -125,7 +128,7 @@ main {
   padding: var(--section-body-padding);
 }
 .section-hero {
-  background-size: auto 90%;
+  background-size: 90rem auto;
 }
 .section-hero .section-title {
   margin-bottom: 5rem;
@@ -167,11 +170,11 @@ main {
 .card-services a {
   display: block;
   padding: 2rem;
-  background: var(--color-light-grey);
+  background-color: var(--color-light-grey);
 }
 .card-services a:hover {
   color: var(--color-white);
-  background: var(--color-primary);
+  background-color: var(--color-primary);
   text-decoration: none;
 }
 
@@ -179,7 +182,7 @@ main {
   position: relative;
   overflow: hidden;
 }
-.card-work .card-image {
+.card-work .card-image img {
   height: 30rem;
   width: 100%;
   object-fit: cover;
@@ -286,7 +289,7 @@ main {
 }
 .nav .nav-link {
   display: block;
-  padding: 0.5rem 1rem 0.5rem 1rem;
+  padding: 0.5rem 1rem;
 }
 .nav .nav-link:hover {
   color: var(--nav-item-link-hover);
@@ -303,7 +306,7 @@ main {
   transition: var(--transition-duration) var(--transition-cubic-bezier);
 }
 
-ul[class="row"] {
+ul.row {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -654,10 +657,10 @@ template {
 .footer-address {
   color: var(--text-color);
 }
-.footer social-link {
+.social-link {
   display: block;
 }
-.footer .social-link svg {
+.social-link > svg {
   fill: var(--text-color);
 }
 /**
