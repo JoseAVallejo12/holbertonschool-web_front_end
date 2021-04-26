@@ -168,7 +168,7 @@ main {
 .card-testimonial {
   text-align: center;
 }
-.card-testimonial .card-avatar{
+.card-testimonial .card-avatar {
   border-radius: 50%;
   width: 10rem;
   height: 10rem;
@@ -196,7 +196,7 @@ main {
   margin: var(--nav-item-margin);
 }
 .nav .nav-item:hover .nav-link::before {
-  background: var(--color-primary);
+  background-color: var(--color-primary);
   width: 100%;
 }
 .nav .nav-link {
@@ -212,7 +212,7 @@ main {
   position: absolute;
   top: 0;
   left: 0;
-  background: var(--color-white);
+  background-color: var(--color-white);
   width: 0;
   height: 0.2rem;
 }
