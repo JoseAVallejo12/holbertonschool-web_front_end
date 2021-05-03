@@ -1,0 +1,10 @@
+/* that assigns: No margin or padding in body tags */
+body {
+  margin: 0px;
+  padding: 0px;
+}
+body {
+  p {
+    margin: 10px;
+  }
+}
