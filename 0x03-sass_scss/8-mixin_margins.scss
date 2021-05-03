@@ -1,7 +1,7 @@
 /* Sass file that assigns: margin to body, h1 */
-@mixin marginSize($width, $height: $width) {
-  width: $width;
-  height: $height;
+@mixin marginSize($size) {
+  width: $size;
+  height: $size;
 }
 body {
   @include marginSize(10px)
