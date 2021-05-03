@@ -1,0 +1,13 @@
+/* use import for get var from 10-colors.scss */
+@import "10-colors.scss";
+.red {
+  color: $red;
+}
+
+.green {
+  color: $green;
+}
+
+.blue {
+  color: $blue;
+}
