@@ -1,0 +1,7 @@
+/* use media query in task advance number 14 */
+h1 {
+  font-size: 20px;
+  @media screen and (max-width: 320px) {
+    font-size: 14px;
+  }
+}
