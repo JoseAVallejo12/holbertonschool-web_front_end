@@ -1,0 +1,6 @@
+/* this task i use the @for */
+@for $value from 1 to 6 {
+  h#{$value} {
+    font-size: #{$value}px;
+  }
+}
