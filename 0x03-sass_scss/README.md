@@ -1,4 +1,6 @@
-# 0x03. Sass & Scss
+|   |   |
+|---|---|
+|<p><img src="https://img.icons8.com/color/100/000000/sass.png"/></p>| <h1>Sass & Scss 0x03.</h1>|
 ## Resources
 **Read or watch:**
 - [Sass Basics](https://intranet.hbtn.io/rltoken/ayoQ7NtS8w7tZvyeqhkzsw)
