@@ -1,0 +1,6 @@
+/* use @for loop in advance task 13 */
+@for $number from 1 to 5 {
+  .col-#{$number} {
+    width: 100% / $number;
+  }
+}
