@@ -849,7 +849,7 @@ input[type="text"], input[type="email"], textarea {
 }
 
 input[type="text"], input[type="email"] {
-  padding-right: 1.2rem;
+  padding-right: 3rem;
 }
 
 input[type="text"]:focus, input[type="email"]:focus, textarea:focus {
