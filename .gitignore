@@ -1,3 +1,4 @@
 .gitignore
 .editorconfig
 w3c/**
+0x07-accessibility/images/**
