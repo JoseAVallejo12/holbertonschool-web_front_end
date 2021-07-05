@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Holberton JQuery</title>
+</head>
+
+<body>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"
+    integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"
+    type="application/javascript">
+    </script>
+  <script type="application/javascript">
+    window.onload = () => {
+      if (window.jQuery) {
+        const createFamilyTree = () => {
+          const tableHtml = $("<table></table>")
+          tableHtml.append("<thead><tr><th>Firstname</th><th>Lastname</th></tr></thead>", "<tbody></tbody>");
+
+          $("body").append(tableHtml);
+        };
+
+        const addNewMember = (firstName, lastName) => {
+          const firstRow = $(`<tr><td>${firstName}</td><td>${lastName}</td><td>(X)</td></tr>`);
+          $("table>tbody").append(firstRow)
+          firstRow.children().last().css("background", "orange").click((e) => {
+            e.target.parentElement.remove()
+          });
+        }
+        createFamilyTree()
+        addNewMember("Guillaume", "Salva")
+        addNewMember("Arielle", "Snizt")
+        addNewMember("Fanette", "Snizt")
+        addNewMember("Gerard", "Snizt")
+        addNewMember("Victor", "Salva")
+
+      } else {
+        console.log('jQuery has not been loaded correctly');
+      }
+    }
+  </script>
+</body>
+
+</html>
