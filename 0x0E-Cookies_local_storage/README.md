@@ -1,4 +1,4 @@
-# 0x0E. Cookies & local storage
+# 0x0E-Cookies_local_storage
 |![icon folder](https://img.icons8.com/fluent-systems-filled/20/216aff/opened-folder.png) Specializations > Web Stack programming > Front-end |
 |-------|
 |![icon user](https://img.icons8.com/fluent-systems-filled/20/216aff/user.png) By Jose Vallejo, Full-Stack Student at Holberton School|
@@ -6,7 +6,6 @@
 
 ## Resources
 **Read or watch:**
-
 - [Cookies and Javascript](https://intranet.hbtn.io/rltoken/GSKBY0oEF0AQNv54Qg66Og)
 - [HTTP Cookies](https://intranet.hbtn.io/rltoken/gCsMhEyenOBpsxPQ4OwAFQ)
 - [js-cookie](https://intranet.hbtn.io/rltoken/XQMxtCbN2K7Ut6ogMtAdaA)
@@ -19,10 +18,11 @@
 - How to use js-cookie for easy cookie manipulation
 - How to use the browser web storage
 - The differences between local storage and session storage
+
 ## Requirements
 - Allowed editors: vi, vim, emacs, Visual Studio Code
 - All your files should end with a new line
 - A README.md file, at the root of the folder of the project, is mandatory
 - Your code should use the js extension
-- All of your code will be compiled/executed on Ubuntu 18.04 using - Node 12.x and npm 6.x
+- All of your code will be compiled/executed on Ubuntu 18.04 using Node 12.x and npm 6.x
 - src/index.js should stay empty - all your Javascript must be in your HTML, inside <script> tag
