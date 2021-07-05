@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+    crossorigin="anonymous"></script>
+  <title>Holberton JQuery</title>
+</head>
+
+<body>
+
+  <script type="application/javascript">
+    window.onload = () => {
+      if (window.jQuery) {
+        function createSearchForm() {
+          const formTemplate = `
+          <form>
+            <input type="text">
+            <input type="submit">
+          </form>
+          `;
+          $("body").append(formTemplate, '<ul></ul>')
+
+        }
+
+        function queryWikipedia(queryString) {
+          const url = `https://en.wikipedia.org/w/api.php?action=query&format=json&list=search&utf8=1&srsearch=${queryString}`;
+          queryString && $.ajax({
+            url: url,
+            type: 'GET',
+            success: (res) => {
+              res.query.search.map((item) => addNewArticle(item.pageid, item.title, item.snippet))
+            },
+            error: function (err) { console.log(err); },
+          });
+        }
+
+        function addNewArticle(id, title, snippet) {
+          const liElemt = $(`</br></br><li><span>${id} - <strong>${title}</strong></span></br></br></li>`);
+          liElemt.append(snippet);
+          $("ul").append(liElemt)
+
+        }
+
+        createSearchForm()
+
+
+        $(":submit").click((event) => {
+          event.preventDefault()
+          queryWikipedia($("input").val());
+        })
+
+      } else {
+        console.log('jQuery has not been loaded correctly');
+      }
+    }
+  </script>
+</body>
+
+</html>

@@ -5,35 +5,35 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"
+    integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
   <title>Holberton JQuery</title>
 </head>
 
 <body>
-  <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"
-    integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"
-    type="application/javascript">
-    </script>
+
   <script type="application/javascript">
     window.onload = () => {
       if (window.jQuery) {
-        const createFamilyTree = () => {
+        function createFamilyTree() {
           const tableHtml = $("<table></table>")
           tableHtml.append("<thead><tr><th>Firstname</th><th>Lastname</th></tr></thead>", "<tbody></tbody>");
 
           $("body").append(tableHtml);
         };
 
-        const addNewMember = (firstName, lastName, position = "") => {
-          const firstRow = $(`<tr><td>${firstName}</td><td>${lastName}</td><td>(X)</td></tr>`);
-          position === "before" ? $("table tbody").before(firstRow) : $("table tbody").append(firstRow);
-          firstRow.children().last().css("background", "orange").click((e) => {
+        function addNewMember(firstName, lastName, position = "") {
+          const tableRow = $(`<tr><td>${firstName}</td><td>${lastName}</td><td>(X)</td></tr>`);
+          position === "before" ? $("table tbody").before(tableRow) : $("table tbody").append(tableRow);
+
+          tableRow.children().last().css("background", "orange").click((e) => {
             e.target.parentElement.remove()
           });
         }
 
-        const createForm = () => {
-          const form = `
-          <div>
+        function createForm() {
+          const formTemplate = `
+          <form>
             <input type="text">
             <input type="text">
             <select name="" id="">
@@ -41,17 +41,18 @@
               <option value="after">After</option>
             </select>
             <input type="submit">
-          </div>
+          </form>
           `;
-          $("table").before(form)
-          $("div input").last().click(() => {
-            const firstName = $("div input").val();
-            const lastName = $("div input:nth-of-type(2)").val();
-            const position = $("div select").val();
-            addNewMember(firstName, lastName, position)
-          })
+          $("table").before(formTemplate)
 
         }
+        $(":submit").click((event) => {
+          event.preventDefault()
+          const firstName = $("div input").val();
+          const lastName = $("div input:nth-of-type(2)").val();
+          const position = $("div select").val();
+          addNewMember(firstName, lastName, position)
+        })
         createFamilyTree()
         createForm()
 
